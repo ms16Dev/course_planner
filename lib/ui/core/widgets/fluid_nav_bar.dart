@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './fluid_icon.dart';
-import './fluid_button.dart';
-import './curves.dart';
+import 'fluid_icon.dart';
+import 'fluid_button.dart';
+import 'curves.dart';
 
 typedef void FluidNavBarChangeCallback(int selectedIndex);
 

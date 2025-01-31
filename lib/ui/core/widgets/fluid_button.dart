@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './fluid_icon.dart';
-import './curves.dart';
+import 'fluid_icon.dart';
+import 'curves.dart';
 
 typedef void FluidNavBarButtonPressedCallback();
 

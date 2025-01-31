@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../ui/placeholder/placeholder_card_short.dart';
+import '../core/placeholder/placeholder_card_tall.dart';
 
-class AccountContent extends StatelessWidget {
+class HomeContent extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return Container(
       padding: EdgeInsets.only(left: 20, right: 20, top: 20),
       child: ListView.builder(
@@ -12,7 +12,7 @@ class AccountContent extends StatelessWidget {
         itemBuilder: (content, index) {
           return Container(
             padding: EdgeInsets.symmetric(vertical: 12),
-            child: PlaceholderCardShort(color: Color(0xFF99D3F7), backgroundColor: Color(0xFFC7EAFF)),
+            child: PlaceholderCardTall(height: 200, color: Color(0xFF99D3F7), backgroundColor: Color(0xFFC7EAFF)),
           );
         },
       ),

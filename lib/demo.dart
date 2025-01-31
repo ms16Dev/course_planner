@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import './ui/app_scroll_behavior.dart';
+import './ui/core/app_scroll_behavior.dart';
 
-import './content/home.dart';
-import './content/account.dart';
-import './content/grid.dart';
-import './fluid_nav_bar.dart';
+import './ui/home/home.dart';
+import './ui/account/account.dart';
+import './ui/mode/mode.dart';
+import './ui/core/widgets/fluid_nav_bar.dart';
 
 class FluidNavBarDemo extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class _FluidNavBarDemoState extends State {
           _child = AccountContent();
           break;
         case 2:
-          _child = GridContent();
+          _child = ModeContent();
           break;
       }
       _child = AnimatedSwitcher(

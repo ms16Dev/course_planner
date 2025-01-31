@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../ui/placeholder/placeholder_image_with_text.dart';
+import '../core/placeholder/placeholder_image_with_text.dart';
 
-class GridContent extends StatelessWidget {
+class ModeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isLandscape = MediaQuery.of(context).size.aspectRatio > 1;
