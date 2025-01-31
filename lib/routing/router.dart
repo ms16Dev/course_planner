@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orders/routing/routes.dart';
 import '../data/repositories/auth/auth_repository.dart';
-import '../demo.dart';
+import '../main_screen.dart';
 import '../ui/auth/login/view_models/login_viewmodel.dart';
 import '../ui/auth/login/widgets/login_screen.dart';
 import '../ui/home/home.dart';
@@ -21,22 +21,22 @@ GoRouter(
   refreshListenable: authRepository,
   routes: [
     ShellRoute(
-      builder: (context, state, child) => FluidNavBarDemo(),
+    builder: (context, state, child) => FluidNavBarDemo(child: child),
       routes: [
         GoRoute(
-          path: '/home',
-          builder: (context, state) => HomeContent(),
+        path: '/home',
+        builder: (context, state) => HomeContent(),
         ),
         GoRoute(
-          path: '/account',
-          builder: (context, state) => AccountContent(),
+        path: '/account',
+        builder: (context, state) => AccountContent(),
         ),
         GoRoute(
-          path: '/mode',
-          builder: (context, state) => ModeContent(),
+        path: '/mode',
+        builder: (context, state) => ModeContent(),
         ),
       ],
-    ),
+      ),
     GoRoute(
       path: '/login',
       builder: (context, state) => LoginScreen(
