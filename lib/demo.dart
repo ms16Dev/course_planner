@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orders/ui/auth/logout/view_models/logout_viewmodel.dart';
+import 'package:orders/ui/auth/logout/widgets/logout_button.dart';
+import 'package:provider/provider.dart';
 import './ui/core/app_scroll_behavior.dart';
 
 import './ui/home/home.dart';
@@ -17,20 +20,24 @@ class _FluidNavBarDemoState extends State {
   Widget _child = HomeContent();
 
   @override
-  Widget build(context) {
-    // Build a simple container that switches content based of off the selected navigation item
-    return MaterialApp(
-      scrollBehavior: AppScrollBehavior(),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Color(0xFF75B7E1),
-        extendBody: true,
-        body: _child,
-        bottomNavigationBar: FluidNavBar(onChange: _handleNavigationChange),
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFF75B7E1),
+      extendBody: true,
+      appBar: AppBar(
+        title: Text("My App"),
+        actions: [
+          LogoutButton(
+            viewModel: LogoutViewModel(
+              authRepository: context.read(), // Fix here
+            ),
+          ),
+        ],
       ),
+      body: _child,
+      bottomNavigationBar: FluidNavBar(onChange: _handleNavigationChange),
     );
   }
-
   void _handleNavigationChange(int index) {
     setState(() {
       switch (index) {
