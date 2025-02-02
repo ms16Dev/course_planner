@@ -56,7 +56,7 @@ class FluidNavBarDemo extends StatelessWidget {
         context.go('/account');
         break;
       case 2:
-        context.go('/mode');
+        context.go('/explore');
         break;
     }
   }

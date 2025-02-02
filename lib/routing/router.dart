@@ -7,7 +7,7 @@ import '../ui/auth/login/view_models/login_viewmodel.dart';
 import '../ui/auth/login/widgets/login_screen.dart';
 import '../ui/home/home.dart';
 import '../ui/account/account.dart';
-import '../ui/mode/mode.dart';
+import '../ui/explore/explore.dart';
 import 'package:provider/provider.dart';
 
 
@@ -32,8 +32,8 @@ GoRouter(
         builder: (context, state) => AccountContent(),
         ),
         GoRoute(
-        path: '/mode',
-        builder: (context, state) => ModeContent(),
+        path: '/explore',
+        builder: (context, state) => ExploreContent(),
         ),
       ],
       ),

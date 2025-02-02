@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../core/placeholder/placeholder_image_with_text.dart';
 
-class ModeContent extends StatelessWidget {
+class ExploreContent extends StatelessWidget {
+  const ExploreContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     bool isLandscape = MediaQuery.of(context).size.aspectRatio > 1;
