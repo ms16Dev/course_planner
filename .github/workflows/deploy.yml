@@ -27,6 +27,9 @@ jobs:
       - name: Build Flutter Web
         run: flutter build web --release
 
+      - name: Fix base href for GitHub Pages
+        run: sed -i 's/<base href="\/">/<base href="\/course_planner\/">/' index.html
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
