@@ -24,10 +24,10 @@ class Booking with _$Booking {
     required DateTime endDate,
 
     /// Destination of the trip
-    required Subject destination,
+    required Subject subject,
 
     /// List of chosen activities
-    required List<Summary> activity,
+    required List<Summary> summary,
   }) = _Booking;
 
   factory Booking.fromJson(Map<String, Object?> json) =>

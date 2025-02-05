@@ -31,10 +31,10 @@ mixin _$Booking {
   DateTime get endDate => throw _privateConstructorUsedError;
 
   /// Destination of the trip
-  Subject get destination => throw _privateConstructorUsedError;
+  Subject get subject => throw _privateConstructorUsedError;
 
   /// List of chosen activities
-  List<Summary> get activity => throw _privateConstructorUsedError;
+  List<Summary> get summary => throw _privateConstructorUsedError;
 
   /// Serializes this Booking to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -54,10 +54,10 @@ abstract class $BookingCopyWith<$Res> {
       {int? id,
       DateTime startDate,
       DateTime endDate,
-      Subject destination,
-      List<Summary> activity});
+      Subject subject,
+      List<Summary> summary});
 
-  $SubjectCopyWith<$Res> get destination;
+  $SubjectCopyWith<$Res> get subject;
 }
 
 /// @nodoc
@@ -78,8 +78,8 @@ class _$BookingCopyWithImpl<$Res, $Val extends Booking>
     Object? id = freezed,
     Object? startDate = null,
     Object? endDate = null,
-    Object? destination = null,
-    Object? activity = null,
+    Object? subject = null,
+    Object? summary = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -94,13 +94,13 @@ class _$BookingCopyWithImpl<$Res, $Val extends Booking>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      destination: null == destination
-          ? _value.destination
-          : destination // ignore: cast_nullable_to_non_nullable
+      subject: null == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
               as Subject,
-      activity: null == activity
-          ? _value.activity
-          : activity // ignore: cast_nullable_to_non_nullable
+      summary: null == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
               as List<Summary>,
     ) as $Val);
   }
@@ -109,9 +109,9 @@ class _$BookingCopyWithImpl<$Res, $Val extends Booking>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $SubjectCopyWith<$Res> get destination {
-    return $SubjectCopyWith<$Res>(_value.destination, (value) {
-      return _then(_value.copyWith(destination: value) as $Val);
+  $SubjectCopyWith<$Res> get subject {
+    return $SubjectCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 }
@@ -127,11 +127,11 @@ abstract class _$$BookingImplCopyWith<$Res> implements $BookingCopyWith<$Res> {
       {int? id,
       DateTime startDate,
       DateTime endDate,
-      Subject destination,
-      List<Summary> activity});
+      Subject subject,
+      List<Summary> summary});
 
   @override
-  $SubjectCopyWith<$Res> get destination;
+  $SubjectCopyWith<$Res> get subject;
 }
 
 /// @nodoc
@@ -150,8 +150,8 @@ class __$$BookingImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? startDate = null,
     Object? endDate = null,
-    Object? destination = null,
-    Object? activity = null,
+    Object? subject = null,
+    Object? summary = null,
   }) {
     return _then(_$BookingImpl(
       id: freezed == id
@@ -166,13 +166,13 @@ class __$$BookingImplCopyWithImpl<$Res>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      destination: null == destination
-          ? _value.destination
-          : destination // ignore: cast_nullable_to_non_nullable
+      subject: null == subject
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
               as Subject,
-      activity: null == activity
-          ? _value._activity
-          : activity // ignore: cast_nullable_to_non_nullable
+      summary: null == summary
+          ? _value._summary
+          : summary // ignore: cast_nullable_to_non_nullable
               as List<Summary>,
     ));
   }
@@ -185,9 +185,9 @@ class _$BookingImpl implements _Booking {
       {this.id,
       required this.startDate,
       required this.endDate,
-      required this.destination,
-      required final List<Summary> activity})
-      : _activity = activity;
+      required this.subject,
+      required final List<Summary> summary})
+      : _summary = summary;
 
   factory _$BookingImpl.fromJson(Map<String, dynamic> json) =>
       _$$BookingImplFromJson(json);
@@ -207,22 +207,22 @@ class _$BookingImpl implements _Booking {
 
   /// Destination of the trip
   @override
-  final Subject destination;
+  final Subject subject;
 
   /// List of chosen activities
-  final List<Summary> _activity;
+  final List<Summary> _summary;
 
   /// List of chosen activities
   @override
-  List<Summary> get activity {
-    if (_activity is EqualUnmodifiableListView) return _activity;
+  List<Summary> get summary {
+    if (_summary is EqualUnmodifiableListView) return _summary;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_activity);
+    return EqualUnmodifiableListView(_summary);
   }
 
   @override
   String toString() {
-    return 'Booking(id: $id, startDate: $startDate, endDate: $endDate, destination: $destination, activity: $activity)';
+    return 'Booking(id: $id, startDate: $startDate, endDate: $endDate, subject: $subject, summary: $summary)';
   }
 
   @override
@@ -234,15 +234,14 @@ class _$BookingImpl implements _Booking {
             (identical(other.startDate, startDate) ||
                 other.startDate == startDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
-            (identical(other.destination, destination) ||
-                other.destination == destination) &&
-            const DeepCollectionEquality().equals(other._activity, _activity));
+            (identical(other.subject, subject) || other.subject == subject) &&
+            const DeepCollectionEquality().equals(other._summary, _summary));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, startDate, endDate,
-      destination, const DeepCollectionEquality().hash(_activity));
+  int get hashCode => Object.hash(runtimeType, id, startDate, endDate, subject,
+      const DeepCollectionEquality().hash(_summary));
 
   /// Create a copy of Booking
   /// with the given fields replaced by the non-null parameter values.
@@ -265,8 +264,8 @@ abstract class _Booking implements Booking {
       {final int? id,
       required final DateTime startDate,
       required final DateTime endDate,
-      required final Subject destination,
-      required final List<Summary> activity}) = _$BookingImpl;
+      required final Subject subject,
+      required final List<Summary> summary}) = _$BookingImpl;
 
   factory _Booking.fromJson(Map<String, dynamic> json) = _$BookingImpl.fromJson;
 
@@ -285,11 +284,11 @@ abstract class _Booking implements Booking {
 
   /// Destination of the trip
   @override
-  Subject get destination;
+  Subject get subject;
 
   /// List of chosen activities
   @override
-  List<Summary> get activity;
+  List<Summary> get summary;
 
   /// Create a copy of Booking
   /// with the given fields replaced by the non-null parameter values.
