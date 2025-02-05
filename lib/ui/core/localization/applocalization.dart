@@ -23,8 +23,8 @@ class AppLocalization {
     'errorWhileDeletingBooking': 'Error while deleting booking',
     'errorWhileLoadingActivities': 'Error while loading activities',
     'errorWhileLoadingBooking': 'Error while loading booking',
-    'errorWhileLoadingContinents': 'Error while loading continents',
-    'errorWhileLoadingDestinations': 'Error while loading destinations',
+    'errorWhileLoadingFields': 'Error while loading fields',
+    'errorWhileLoadingSubjects': 'Error while loading subjects',
     'errorWhileLoadingHome': 'Error while loading home',
     'errorWhileLogin': 'Error while trying to login',
     'errorWhileLogout': 'Error while trying to logout',
@@ -35,7 +35,7 @@ class AppLocalization {
     'login': 'Login',
     'nameTrips': '{name}\'s Trips',
     'search': 'Search',
-    'searchDestination': 'Search destination',
+    'searchSubject': 'Search subject',
     'selected': '{1} selected',
     'shareTrip': 'Share Trip',
     'tryAgain': 'Try again',
@@ -59,10 +59,10 @@ class AppLocalization {
 
   String get errorWhileLoadingBooking => _get('errorWhileLoadingBooking');
 
-  String get errorWhileLoadingContinents => _get('errorWhileLoadingContinents');
+  String get errorWhileLoadingFields => _get('errorWhileLoadingContinents');
 
-  String get errorWhileLoadingDestinations =>
-      _get('errorWhileLoadingDestinations');
+  String get errorWhileLoadingSubjects =>
+      _get('errorWhileLoadingSubjects');
 
   String get errorWhileSavingActivities => _get('errorWhileSavingActivities');
 
@@ -72,7 +72,7 @@ class AppLocalization {
 
   String get search => _get('search');
 
-  String get searchDestination => _get('searchDestination');
+  String get searchSubject => _get('searchSubject');
 
   String get shareTrip => _get('shareTrip');
 
