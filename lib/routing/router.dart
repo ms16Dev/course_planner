@@ -5,6 +5,8 @@ import '../data/repositories/auth/auth_repository.dart';
 import '../main_screen.dart';
 import '../ui/auth/login/view_models/login_viewmodel.dart';
 import '../ui/auth/login/widgets/login_screen.dart';
+import '../ui/explore/view_models/search_form_viewmodel.dart';
+import '../ui/explore/widgets/search_form_screen.dart';
 import '../ui/home/home.dart';
 import '../ui/account/account.dart';
 import '../ui/explore/explore.dart';
@@ -33,8 +35,13 @@ GoRouter(
         ),
         GoRoute(
         path: '/explore',
-        builder: (context, state) => ExploreContent(),
-        ),
+          builder: (context, state) {
+            final viewModel = SearchFormViewModel(
+              fieldRepository: context.read(),
+              courseInfoRepository: context.read(),
+            );
+            return SearchFormScreen(viewModel: viewModel);
+          },        ),
       ],
       ),
     GoRoute(

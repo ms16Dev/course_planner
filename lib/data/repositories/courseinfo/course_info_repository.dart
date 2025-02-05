@@ -13,5 +13,5 @@ abstract class CourseInfoRepository {
 
   /// Sets [CourseInfo], overrides the previous one stored.
   /// Returns Result.Ok if set is successful.
-  Future<Result<void>> setCourseInfo(CourseInfo itineraryConfig);
+  Future<Result<void>> setCourseInfo(CourseInfo courseInfo);
 }

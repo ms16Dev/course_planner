@@ -6,4 +6,7 @@ class Routes {
   static const home = '/home';
   static const login = '/login';
   static const onboarding = '/onboarding';
+  static const summaries = '/summaries';
+  static const results = '/results';
+  static const search = '/search';
 }
