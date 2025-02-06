@@ -16,32 +16,32 @@ class LocalDataService {
   List<Field> getFields() {
     return [
       const Field(
-        name: 'Europe',
-        imageUrl: 'https://rstr.in/google/tripedia/TmR12QdlVTT',
+        name: 'Computer Science',
+        imageUrl: 'https://th.bing.com/th/id/OIP.L-YnUrseh_GARPg44gFjgQHaE8?rs=1&pid=ImgDetMain',
       ),
       const Field(
-        name: 'Asia',
-        imageUrl: 'https://rstr.in/google/tripedia/VJ8BXlQg8O1',
+        name: 'Machine Learning',
+        imageUrl: 'https://th.bing.com/th/id/OIP.y8lkIwWEp22S_9T1J8-goQHaE8?rs=1&pid=ImgDetMain',
       ),
       const Field(
-        name: 'South America',
-        imageUrl: 'https://rstr.in/google/tripedia/flm_-o1aI8e',
+        name: 'Artificial Intelligence',
+        imageUrl: 'https://th.bing.com/th/id/OIP.tFrPTQeOkdxPeRbKpDJZgwHaFF?rs=1&pid=ImgDetMain',
       ),
       const Field(
-        name: 'Africa',
-        imageUrl: 'https://rstr.in/google/tripedia/-nzi8yFOBpF',
+        name: 'Software Engineering',
+        imageUrl: 'https://th.bing.com/th/id/R.501e2b10f28d1759e94441090af87552?rik=9tWZNE%2b4YTgT8Q&pid=ImgRaw&r=0',
       ),
       const Field(
-        name: 'North America',
-        imageUrl: 'https://rstr.in/google/tripedia/jlbgFDrSUVE',
+        name: 'Web Development',
+        imageUrl: 'https://th.bing.com/th/id/R.2211a28e0a154c4b34ff8acfb945dba1?rik=FxTk9BfwMf6lUA&pid=ImgRaw&r=0',
       ),
       const Field(
-        name: 'Oceania',
-        imageUrl: 'https://rstr.in/google/tripedia/vxyrDE-fZVL',
+        name: 'Database Management',
+        imageUrl: 'https://th.bing.com/th/id/OIP.GSQim60q0HZDFT8Q11C0zAHaEW?rs=1&pid=ImgDetMain',
       ),
       const Field(
-        name: 'Australia',
-        imageUrl: 'https://rstr.in/google/tripedia/z6vy6HeRyvZ',
+        name: 'DevOps',
+        imageUrl: 'https://th.bing.com/th/id/OIP.w8W9VW9I5xa8BNxTwE8gnQHaE1?rs=1&pid=ImgDetMain',
       ),
     ];
   }
