@@ -25,7 +25,8 @@ jobs:
         run: flutter pub get
 
       - name: Build Flutter Web
-        run: flutter build web --release
+        run: flutter build web --base-href="/course_planner/"
+
 
       - name: Fix base href for GitHub Pages
         run: sed -i 's/<base href="\/">/<base href="\/course_planner\/">/' build/web/index.html
