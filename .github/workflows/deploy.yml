@@ -3,7 +3,7 @@ name: Deploy Flutter Web to GitHub Pages
 on:
   push:
     branches:
-      - main  # Runs when you push to the main branch
+      - master  # Runs when you push to the main branch
 
 jobs:
   build:
