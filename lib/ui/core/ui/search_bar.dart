@@ -9,7 +9,6 @@ import '../localization/applocalization.dart';
 import '../themes/colors.dart';
 import '../themes/dimens.dart';
 import 'date_format_start_end.dart';
-import 'home_button.dart';
 
 /// Application top search bar.
 ///
@@ -51,8 +50,6 @@ class AppSearchBar extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 10),
-        const HomeButton(),
       ],
     );
   }
