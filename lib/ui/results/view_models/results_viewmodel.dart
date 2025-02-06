@@ -17,9 +17,9 @@ import 'package:flutter/cupertino.dart';
 class ResultsViewModel extends ChangeNotifier {
   ResultsViewModel({
     required SubjectRepository subjectRepository,
-    required CourseInfoRepository itineraryConfigRepository,
+    required CourseInfoRepository courseInfoRepository,
   })  : _subjectRepository = subjectRepository,
-        _itineraryConfigRepository = itineraryConfigRepository {
+        _courseInfoRepository = courseInfoRepository {
     updateCourseInfo = Command1<void, String>(_updateCourseInfo);
     search = Command0(_search)..execute();
   }
@@ -28,7 +28,7 @@ class ResultsViewModel extends ChangeNotifier {
 
   final SubjectRepository _subjectRepository;
 
-  final CourseInfoRepository _itineraryConfigRepository;
+  final CourseInfoRepository _courseInfoRepository;
 
   // Setters are private
   List<Subject> _subjects = [];
@@ -36,10 +36,10 @@ class ResultsViewModel extends ChangeNotifier {
   /// List of subjects, may be empty but never null
   List<Subject> get subjects => _subjects;
 
-  CourseInfo? _itineraryConfig;
+  CourseInfo? _courseInfo;
 
   /// Filter options to display on search bar
-  CourseInfo get config => _itineraryConfig ?? const CourseInfo();
+  CourseInfo get config => _courseInfo ?? const CourseInfo();
 
   /// Perform search
   late final Command0 search;
@@ -49,7 +49,7 @@ class ResultsViewModel extends ChangeNotifier {
 
   Future<Result<void>> _search() async {
     // Load current itinerary config
-    final resultConfig = await _itineraryConfigRepository.getCourseInfo();
+    final resultConfig = await _courseInfoRepository.getCourseInfo();
     if (resultConfig is Error) {
       _log.warning(
         'Failed to load stored CourseInfo',
@@ -57,7 +57,7 @@ class ResultsViewModel extends ChangeNotifier {
       );
       return resultConfig;
     }
-    _itineraryConfig = resultConfig.asOk.value;
+    _courseInfo = resultConfig.asOk.value;
     notifyListeners();
 
     final result = await _subjectRepository.getSubjects();
@@ -67,7 +67,7 @@ class ResultsViewModel extends ChangeNotifier {
           // If the result is Ok, update the list of subjects
           _subjects = result.value
               .where((subject) =>
-                  subject.field == _itineraryConfig!.field)
+                  subject.field == _courseInfo!.field)
               .toList();
           _log.fine('Subjects (${_subjects.length}) loaded');
         }
@@ -85,7 +85,7 @@ class ResultsViewModel extends ChangeNotifier {
   Future<Result<void>> _updateCourseInfo(String subjectRef) async {
     assert(subjectRef.isNotEmpty, "subjectRef should not be empty");
 
-    final resultConfig = await _itineraryConfigRepository.getCourseInfo();
+    final resultConfig = await _courseInfoRepository.getCourseInfo();
     if (resultConfig is Error) {
       _log.warning(
         'Failed to load stored CourseInfo',
@@ -94,9 +94,9 @@ class ResultsViewModel extends ChangeNotifier {
       return resultConfig;
     }
 
-    final itineraryConfig = resultConfig.asOk.value;
-    final result = await _itineraryConfigRepository
-        .setCourseInfo(itineraryConfig.copyWith(
+    final courseInfo = resultConfig.asOk.value;
+    final result = await _courseInfoRepository
+        .setCourseInfo(courseInfo.copyWith(
       subject: subjectRef,
       summaries: [],
     ));

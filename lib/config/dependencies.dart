@@ -20,8 +20,25 @@ import '../data/repositories/summary/summary_repository_local.dart';
 import '../data/repositories/user/user_repository.dart';
 import '../data/repositories/user/user_repository_local.dart';
 import '../data/services/local/local_data_service.dart';
+import '../domain/use_cases/booking/booking_create_use_case.dart';
+import '../domain/use_cases/booking/booking_share_use_case.dart';
 
 
+/// Shared providers for all configurations.
+List<SingleChildWidget> _sharedProviders = [
+  Provider(
+    lazy: true,
+    create: (context) => BookingCreateUseCase(
+      subjectRepository: context.read(),
+      summaryRepository: context.read(),
+      bookingRepository: context.read(),
+    ),
+  ),
+  Provider(
+    lazy: true,
+    create: (context) => BookingShareUseCase.withSharePlus(),
+  ),
+];
 
 /// Configure dependencies for local data.
 /// This dependency list uses repositories that provide local data.
@@ -62,5 +79,6 @@ List<SingleChildWidget> get providersLocal {
         localDataService: context.read(),
       ) as UserRepository,
     ),
+    ..._sharedProviders,
   ];
 }

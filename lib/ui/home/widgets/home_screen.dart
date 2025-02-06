@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Workaround for https://github.com/flutter/flutter/issues/115358#issuecomment-2117157419
           heroTag: null,
           key: const ValueKey(bookingButtonKey),
-          onPressed: () => context.go(Routes.search),
+          onPressed: () => context.go(Routes.explore),
           label: Text(AppLocalization.of(context).bookNewTrip),
           icon: const Icon(Icons.add_location_outlined),
         ),

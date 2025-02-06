@@ -5,6 +5,8 @@ import '../data/repositories/auth/auth_repository.dart';
 import '../main_screen.dart';
 import '../ui/auth/login/view_models/login_viewmodel.dart';
 import '../ui/auth/login/widgets/login_screen.dart';
+import '../ui/booking/view_models/booking_viewmodel.dart';
+import '../ui/booking/widgets/booking_screen.dart';
 import '../ui/explore/view_models/search_form_viewmodel.dart';
 import '../ui/explore/widgets/search_form_screen.dart';
 import '../ui/account/account.dart';
@@ -68,7 +70,7 @@ GoRouter(
       builder: (context, state) {
         final viewModel = ResultsViewModel(
           subjectRepository: context.read(),
-          itineraryConfigRepository: context.read(),
+          courseInfoRepository: context.read(),
         );
         return ResultsScreen(
           viewModel: viewModel,
@@ -87,6 +89,48 @@ GoRouter(
         );
       },
     ),
+    GoRoute(
+      path: Routes.booking,
+      builder: (context, state) {
+        final viewModel = BookingViewModel(
+          courseInfoRepository: context.read(),
+          createBookingUseCase: context.read(),
+          shareBookingUseCase: context.read(),
+          bookingRepository: context.read(),
+        );
+
+        // When opening the booking screen directly
+        // create a new booking from the stored ItineraryConfig.
+        viewModel.createBooking.execute();
+
+        return BookingScreen(
+          viewModel: viewModel,
+        );
+      },
+      routes: [
+        GoRoute(
+          path: ':id',
+          builder: (context, state) {
+            final id = int.parse(state.pathParameters['id']!);
+            final viewModel = BookingViewModel(
+              courseInfoRepository: context.read(),
+              createBookingUseCase: context.read(),
+              shareBookingUseCase: context.read(),
+              bookingRepository: context.read(),
+            );
+
+            // When opening the booking screen with an existing id
+            // load and display that booking.
+            viewModel.loadBooking.execute(id);
+
+            return BookingScreen(
+              viewModel: viewModel,
+            );
+          },
+        ),
+      ],
+    ),
+
   ],
 );
 
