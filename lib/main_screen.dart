@@ -21,6 +21,7 @@ class FluidNavBarDemo extends StatelessWidget {
           LogoutButton(
             viewModel: LogoutViewModel(
               authRepository: context.read(),
+              courseInfoRepository: context.read(),
             ),
           ),
         ],

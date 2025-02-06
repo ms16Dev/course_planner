@@ -9,8 +9,10 @@ import '../ui/explore/view_models/search_form_viewmodel.dart';
 import '../ui/explore/widgets/search_form_screen.dart';
 import '../ui/home/home.dart';
 import '../ui/account/account.dart';
-import '../ui/explore/explore.dart';
 import 'package:provider/provider.dart';
+
+import '../ui/home/view_models/home_viewmodel.dart';
+import '../ui/home/widgets/home_screen.dart';
 
 
 GoRouter router(
@@ -27,8 +29,13 @@ GoRouter(
       routes: [
         GoRoute(
         path: '/home',
-        builder: (context, state) => HomeContent(),
-        ),
+          builder: (context, state) {
+            final viewModel = HomeViewModel(
+              bookingRepository: context.read(),
+              userRepository: context.read(),
+            );
+            return HomeScreen(viewModel: viewModel);
+          },        ),
         GoRoute(
         path: '/account',
         builder: (context, state) => AccountContent(),

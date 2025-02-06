@@ -9,4 +9,7 @@ class Routes {
   static const summaries = '/summaries';
   static const results = '/results';
   static const search = '/search';
+  static const booking = '/$bookingRelative';
+  static const bookingRelative = 'booking';
+  static String bookingWithId(int id) => '$booking/$id';
 }
