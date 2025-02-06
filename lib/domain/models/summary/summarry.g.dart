@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'summary.dart';
+part of 'summarry.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SummaryImpl _$$SummaryImplFromJson(Map<String, dynamic> json) =>
-    _$SummaryImpl(
+_$SummarryImpl _$$SummarryImplFromJson(Map<String, dynamic> json) =>
+    _$SummarryImpl(
       title: json['title'] as String,
       description: json['description'] as String,
       duration: (json['duration'] as num).toInt(),
@@ -17,7 +17,7 @@ _$SummaryImpl _$$SummaryImplFromJson(Map<String, dynamic> json) =>
       imageUrl: json['imageUrl'] as String,
     );
 
-Map<String, dynamic> _$$SummaryImplToJson(_$SummaryImpl instance) =>
+Map<String, dynamic> _$$SummarryImplToJson(_$SummarryImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'description': instance.description,

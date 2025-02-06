@@ -23,7 +23,7 @@ class TiltedCards extends StatelessWidget {
             Positioned(
               left: 0,
               child: _Card(
-                imageUrl: 'https://rstr.in/google/tripedia/g2i0BsYPKW-',
+                imageUrl: 'https://th.bing.com/th/id/OIP.L-YnUrseh_GARPg44gFjgQHaE8?rs=1&pid=ImgDetMain',
                 width: 200,
                 height: 273,
                 tilt: -3.83 / 360,
@@ -32,14 +32,14 @@ class TiltedCards extends StatelessWidget {
             Positioned(
               right: 0,
               child: _Card(
-                imageUrl: 'https://rstr.in/google/tripedia/980sqNgaDRK',
+                imageUrl: 'https://th.bing.com/th/id/R.2211a28e0a154c4b34ff8acfb945dba1?rik=FxTk9BfwMf6lUA&pid=ImgRaw&r=0',
                 width: 180,
                 height: 230,
                 tilt: 3.46 / 360,
               ),
             ),
             _Card(
-              imageUrl: 'https://rstr.in/google/tripedia/pHfPmf3o5NU',
+              imageUrl: 'https://th.bing.com/th/id/OIP.tFrPTQeOkdxPeRbKpDJZgwHaFF?rs=1&pid=ImgDetMain',
               width: 225,
               height: 322,
               tilt: 0,

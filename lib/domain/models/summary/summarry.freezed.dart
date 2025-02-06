@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'summary.dart';
+part of 'summarry.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Summary _$SummaryFromJson(Map<String, dynamic> json) {
-  return _Summary.fromJson(json);
+Summarry _$SummarryFromJson(Map<String, dynamic> json) {
+  return _Summarry.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Summary {
+mixin _$Summarry {
   /// e.g. 'Basics of Computer Science'
   String get title => throw _privateConstructorUsedError;
 
@@ -42,19 +42,20 @@ mixin _$Summary {
   /// e.g. 'https://storage.googleapis.com/tripedia-images/activities/alaska_glacier-trekking-and-ice-climbing.jpg'
   String get imageUrl => throw _privateConstructorUsedError;
 
-  /// Serializes this Summary to a JSON map.
+  /// Serializes this Summarry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Summary
+  /// Create a copy of Summarry
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SummaryCopyWith<Summary> get copyWith => throw _privateConstructorUsedError;
+  $SummarryCopyWith<Summarry> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SummaryCopyWith<$Res> {
-  factory $SummaryCopyWith(Summary value, $Res Function(Summary) then) =
-      _$SummaryCopyWithImpl<$Res, Summary>;
+abstract class $SummarryCopyWith<$Res> {
+  factory $SummarryCopyWith(Summarry value, $Res Function(Summarry) then) =
+      _$SummarryCopyWithImpl<$Res, Summarry>;
   @useResult
   $Res call(
       {String title,
@@ -67,16 +68,16 @@ abstract class $SummaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SummaryCopyWithImpl<$Res, $Val extends Summary>
-    implements $SummaryCopyWith<$Res> {
-  _$SummaryCopyWithImpl(this._value, this._then);
+class _$SummarryCopyWithImpl<$Res, $Val extends Summarry>
+    implements $SummarryCopyWith<$Res> {
+  _$SummarryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Summary
+  /// Create a copy of Summarry
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -123,10 +124,11 @@ class _$SummaryCopyWithImpl<$Res, $Val extends Summary>
 }
 
 /// @nodoc
-abstract class _$$SummaryImplCopyWith<$Res> implements $SummaryCopyWith<$Res> {
-  factory _$$SummaryImplCopyWith(
-          _$SummaryImpl value, $Res Function(_$SummaryImpl) then) =
-      __$$SummaryImplCopyWithImpl<$Res>;
+abstract class _$$SummarryImplCopyWith<$Res>
+    implements $SummarryCopyWith<$Res> {
+  factory _$$SummarryImplCopyWith(
+          _$SummarryImpl value, $Res Function(_$SummarryImpl) then) =
+      __$$SummarryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -140,14 +142,14 @@ abstract class _$$SummaryImplCopyWith<$Res> implements $SummaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SummaryImplCopyWithImpl<$Res>
-    extends _$SummaryCopyWithImpl<$Res, _$SummaryImpl>
-    implements _$$SummaryImplCopyWith<$Res> {
-  __$$SummaryImplCopyWithImpl(
-      _$SummaryImpl _value, $Res Function(_$SummaryImpl) _then)
+class __$$SummarryImplCopyWithImpl<$Res>
+    extends _$SummarryCopyWithImpl<$Res, _$SummarryImpl>
+    implements _$$SummarryImplCopyWith<$Res> {
+  __$$SummarryImplCopyWithImpl(
+      _$SummarryImpl _value, $Res Function(_$SummarryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Summary
+  /// Create a copy of Summarry
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -160,7 +162,7 @@ class __$$SummaryImplCopyWithImpl<$Res>
     Object? ref = null,
     Object? imageUrl = null,
   }) {
-    return _then(_$SummaryImpl(
+    return _then(_$SummarryImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -195,8 +197,8 @@ class __$$SummaryImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SummaryImpl implements _Summary {
-  const _$SummaryImpl(
+class _$SummarryImpl implements _Summarry {
+  const _$SummarryImpl(
       {required this.title,
       required this.description,
       required this.duration,
@@ -205,8 +207,8 @@ class _$SummaryImpl implements _Summary {
       required this.ref,
       required this.imageUrl});
 
-  factory _$SummaryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SummaryImplFromJson(json);
+  factory _$SummarryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SummarryImplFromJson(json);
 
   /// e.g. 'Basics of Computer Science'
   @override
@@ -239,14 +241,14 @@ class _$SummaryImpl implements _Summary {
 
   @override
   String toString() {
-    return 'Summary(title: $title, description: $description, duration: $duration, credits: $credits, subjectRef: $subjectRef, ref: $ref, imageUrl: $imageUrl)';
+    return 'Summarry(title: $title, description: $description, duration: $duration, credits: $credits, subjectRef: $subjectRef, ref: $ref, imageUrl: $imageUrl)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SummaryImpl &&
+            other is _$SummarryImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -265,33 +267,34 @@ class _$SummaryImpl implements _Summary {
   int get hashCode => Object.hash(runtimeType, title, description, duration,
       credits, subjectRef, ref, imageUrl);
 
-  /// Create a copy of Summary
+  /// Create a copy of Summarry
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SummaryImplCopyWith<_$SummaryImpl> get copyWith =>
-      __$$SummaryImplCopyWithImpl<_$SummaryImpl>(this, _$identity);
+  _$$SummarryImplCopyWith<_$SummarryImpl> get copyWith =>
+      __$$SummarryImplCopyWithImpl<_$SummarryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SummaryImplToJson(
+    return _$$SummarryImplToJson(
       this,
     );
   }
 }
 
-abstract class _Summary implements Summary {
-  const factory _Summary(
+abstract class _Summarry implements Summarry {
+  const factory _Summarry(
       {required final String title,
       required final String description,
       required final int duration,
       required final int credits,
       required final String subjectRef,
       required final String ref,
-      required final String imageUrl}) = _$SummaryImpl;
+      required final String imageUrl}) = _$SummarryImpl;
 
-  factory _Summary.fromJson(Map<String, dynamic> json) = _$SummaryImpl.fromJson;
+  factory _Summarry.fromJson(Map<String, dynamic> json) =
+      _$SummarryImpl.fromJson;
 
   /// e.g. 'Basics of Computer Science'
   @override
@@ -322,10 +325,10 @@ abstract class _Summary implements Summary {
   @override
   String get imageUrl;
 
-  /// Create a copy of Summary
+  /// Create a copy of Summarry
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SummaryImplCopyWith<_$SummaryImpl> get copyWith =>
+  _$$SummarryImplCopyWith<_$SummarryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

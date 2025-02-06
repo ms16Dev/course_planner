@@ -34,7 +34,7 @@ mixin _$Booking {
   Subject get subject => throw _privateConstructorUsedError;
 
   /// List of chosen activities
-  List<Summary> get summary => throw _privateConstructorUsedError;
+  List<Summarry> get summary => throw _privateConstructorUsedError;
 
   /// Serializes this Booking to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $BookingCopyWith<$Res> {
       DateTime startDate,
       DateTime endDate,
       Subject subject,
-      List<Summary> summary});
+      List<Summarry> summary});
 
   $SubjectCopyWith<$Res> get subject;
 }
@@ -101,7 +101,7 @@ class _$BookingCopyWithImpl<$Res, $Val extends Booking>
       summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
-              as List<Summary>,
+              as List<Summarry>,
     ) as $Val);
   }
 
@@ -128,7 +128,7 @@ abstract class _$$BookingImplCopyWith<$Res> implements $BookingCopyWith<$Res> {
       DateTime startDate,
       DateTime endDate,
       Subject subject,
-      List<Summary> summary});
+      List<Summarry> summary});
 
   @override
   $SubjectCopyWith<$Res> get subject;
@@ -173,7 +173,7 @@ class __$$BookingImplCopyWithImpl<$Res>
       summary: null == summary
           ? _value._summary
           : summary // ignore: cast_nullable_to_non_nullable
-              as List<Summary>,
+              as List<Summarry>,
     ));
   }
 }
@@ -186,7 +186,7 @@ class _$BookingImpl implements _Booking {
       required this.startDate,
       required this.endDate,
       required this.subject,
-      required final List<Summary> summary})
+      required final List<Summarry> summary})
       : _summary = summary;
 
   factory _$BookingImpl.fromJson(Map<String, dynamic> json) =>
@@ -210,11 +210,11 @@ class _$BookingImpl implements _Booking {
   final Subject subject;
 
   /// List of chosen activities
-  final List<Summary> _summary;
+  final List<Summarry> _summary;
 
   /// List of chosen activities
   @override
-  List<Summary> get summary {
+  List<Summarry> get summary {
     if (_summary is EqualUnmodifiableListView) return _summary;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_summary);
@@ -265,7 +265,7 @@ abstract class _Booking implements Booking {
       required final DateTime startDate,
       required final DateTime endDate,
       required final Subject subject,
-      required final List<Summary> summary}) = _$BookingImpl;
+      required final List<Summarry> summary}) = _$BookingImpl;
 
   factory _Booking.fromJson(Map<String, dynamic> json) = _$BookingImpl.fromJson;
 
@@ -288,7 +288,7 @@ abstract class _Booking implements Booking {
 
   /// List of chosen activities
   @override
-  List<Summary> get summary;
+  List<Summarry> get summary;
 
   /// Create a copy of Booking
   /// with the given fields replaced by the non-null parameter values.

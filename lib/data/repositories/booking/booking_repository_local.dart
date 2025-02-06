@@ -73,7 +73,7 @@ class BookingRepositoryLocal implements BookingRepository {
     if (_bookings.isEmpty) {
       final subject = (await _localDataService.getSubjects()).first;
       final summaries = (await _localDataService.getSummaries())
-          .where((activity) => activity.subjectRef == subject.ref)
+          .where((summarry) => summarry.subjectRef == subject.ref)
           .take(4)
           .toList();
 

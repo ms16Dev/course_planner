@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import '../../../domain/models/summary/summary.dart';
+import '../../../domain/models/summary/summarry.dart';
 import '../../../utils/result.dart';
 import '../../services/local/local_data_service.dart';
 import 'summary_repository.dart';
@@ -17,10 +17,10 @@ class SummaryRepositoryLocal implements SummaryRepository {
   final LocalDataService _localDataService;
 
   @override
-  Future<Result<List<Summary>>> getBySubject(String ref) async {
+  Future<Result<List<Summarry>>> getBySubject(String ref) async {
     try {
       final summaries = (await _localDataService.getSummaries())
-          .where((summary) => summary.subjectRef == ref)
+          .where((summarry) => summarry.subjectRef == ref)
           .toList();
 
       return Result.ok(summaries);

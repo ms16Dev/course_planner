@@ -7,12 +7,15 @@ import '../ui/auth/login/view_models/login_viewmodel.dart';
 import '../ui/auth/login/widgets/login_screen.dart';
 import '../ui/explore/view_models/search_form_viewmodel.dart';
 import '../ui/explore/widgets/search_form_screen.dart';
-import '../ui/home/home.dart';
 import '../ui/account/account.dart';
 import 'package:provider/provider.dart';
 
 import '../ui/home/view_models/home_viewmodel.dart';
 import '../ui/home/widgets/home_screen.dart';
+import '../ui/results/view_models/results_viewmodel.dart';
+import '../ui/results/widgets/results_screen.dart';
+import '../ui/summaries/view_models/summaries_viewmodel.dart';
+import '../ui/summaries/widgets/summaries_screen.dart';
 
 
 GoRouter router(
@@ -48,7 +51,8 @@ GoRouter(
               courseInfoRepository: context.read(),
             );
             return SearchFormScreen(viewModel: viewModel);
-          },        ),
+          },
+        ),
       ],
       ),
     GoRoute(
@@ -58,6 +62,30 @@ GoRouter(
           authRepository: context.read(),
         ),
       ),
+    ),
+    GoRoute(
+      path: Routes.results,
+      builder: (context, state) {
+        final viewModel = ResultsViewModel(
+          subjectRepository: context.read(),
+          itineraryConfigRepository: context.read(),
+        );
+        return ResultsScreen(
+          viewModel: viewModel,
+        );
+      },
+    ),
+    GoRoute(
+      path: Routes.summaries,
+      builder: (context, state) {
+        final viewModel = SummariesViewModel(
+          summaryRepository: context.read(),
+          courseInfoRepository: context.read(),
+        );
+        return SummariesScreen(
+          viewModel: viewModel,
+        );
+      },
     ),
   ],
 );

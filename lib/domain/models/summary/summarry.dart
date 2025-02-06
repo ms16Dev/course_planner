@@ -4,14 +4,14 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'summary.freezed.dart';
+part 'summarry.freezed.dart';
 
-part 'summary.g.dart';
+part 'summarry.g.dart';
 
 
 @freezed
-class Summary with _$Summary {
-  const factory Summary({
+class Summarry with _$Summarry {
+  const factory Summarry({
     /// e.g. 'Basics of Computer Science'
     required String title,
 
@@ -33,8 +33,8 @@ class Summary with _$Summary {
 
     /// e.g. 'https://storage.googleapis.com/tripedia-images/activities/alaska_glacier-trekking-and-ice-climbing.jpg'
     required String imageUrl,
-  }) = _Summary;
+  }) = _Summarry;
 
-  factory Summary.fromJson(Map<String, Object?> json) =>
-      _$SummaryFromJson(json);
+  factory Summarry.fromJson(Map<String, Object?> json) =>
+      _$SummarryFromJson(json);
 }

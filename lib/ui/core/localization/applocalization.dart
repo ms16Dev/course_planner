@@ -13,7 +13,7 @@ class AppLocalization {
   }
 
   static const _strings = <String, String>{
-    'activities': 'Activities',
+    'summaries': 'Summaries',
     'addDates': 'Add Dates',
     'bookingDeleted': 'Booking deleted',
     'bookNewTrip': 'Book New Trip',
@@ -21,14 +21,14 @@ class AppLocalization {
     'confirm': 'Confirm',
     'daytime': 'Daytime',
     'errorWhileDeletingBooking': 'Error while deleting booking',
-    'errorWhileLoadingActivities': 'Error while loading activities',
+    'errorWhileLoadingSummaries': 'Error while loading summaries',
     'errorWhileLoadingBooking': 'Error while loading booking',
     'errorWhileLoadingFields': 'Error while loading fields',
     'errorWhileLoadingSubjects': 'Error while loading subjects',
     'errorWhileLoadingHome': 'Error while loading home',
     'errorWhileLogin': 'Error while trying to login',
     'errorWhileLogout': 'Error while trying to logout',
-    'errorWhileSavingActivities': 'Error while saving activities',
+    'errorWhileSavingSummaries': 'Error while saving summaries',
     'errorWhileSavingItinerary': 'Error while saving itinerary',
     'errorWhileSharing': 'Error while sharing booking',
     'evening': 'Evening',
@@ -39,7 +39,7 @@ class AppLocalization {
     'selected': '{1} selected',
     'shareTrip': 'Share Trip',
     'tryAgain': 'Try again',
-    'yourChosenActivities': 'Your chosen activities',
+    'yourChosenSummaries': 'Your chosen summaries',
     'when': 'When',
   };
 
@@ -47,7 +47,7 @@ class AppLocalization {
   static String _get(String label) =>
       _strings[label] ?? '[${label.toUpperCase()}]';
 
-  String get activities => _get('activities');
+  String get summaries => _get('summaries');
 
   String get addDates => _get('addDates');
 
@@ -55,7 +55,7 @@ class AppLocalization {
 
   String get daytime => _get('daytime');
 
-  String get errorWhileLoadingActivities => _get('errorWhileLoadingActivities');
+  String get errorWhileLoadingSummaries => _get('errorWhileLoadingSummaries');
 
   String get errorWhileLoadingBooking => _get('errorWhileLoadingBooking');
 
@@ -64,7 +64,7 @@ class AppLocalization {
   String get errorWhileLoadingSubjects =>
       _get('errorWhileLoadingSubjects');
 
-  String get errorWhileSavingActivities => _get('errorWhileSavingActivities');
+  String get errorWhileSavingSummaries => _get('errorWhileSavingSummaries');
 
   String get errorWhileSavingItinerary => _get('errorWhileSavingItinerary');
 
@@ -78,7 +78,7 @@ class AppLocalization {
 
   String get tryAgain => _get('tryAgain');
 
-  String get yourChosenActivities => _get('yourChosenActivities');
+  String get yourChosenSummaries => _get('yourChosenSummaries');
 
   String get when => _get('when');
 

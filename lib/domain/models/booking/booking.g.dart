@@ -13,7 +13,7 @@ _$BookingImpl _$$BookingImplFromJson(Map<String, dynamic> json) =>
       endDate: DateTime.parse(json['endDate'] as String),
       subject: Subject.fromJson(json['subject'] as Map<String, dynamic>),
       summary: (json['summary'] as List<dynamic>)
-          .map((e) => Summary.fromJson(e as Map<String, dynamic>))
+          .map((e) => Summarry.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

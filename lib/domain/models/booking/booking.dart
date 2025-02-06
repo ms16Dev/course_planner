@@ -4,7 +4,7 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../summary/summary.dart';
+import '../summary/summarry.dart';
 import '../subject/subject.dart';
 
 part 'booking.freezed.dart';
@@ -27,7 +27,7 @@ class Booking with _$Booking {
     required Subject subject,
 
     /// List of chosen activities
-    required List<Summary> summary,
+    required List<Summarry> summary,
   }) = _Booking;
 
   factory Booking.fromJson(Map<String, Object?> json) =>

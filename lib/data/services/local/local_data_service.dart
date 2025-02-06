@@ -7,7 +7,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 import '../../../config/assets.dart';
-import '../../../domain/models/summary/summary.dart';
+import '../../../domain/models/summary/summarry.dart';
 import '../../../domain/models/field/field.dart';
 import '../../../domain/models/subject/subject.dart';
 import '../../../domain/models/user/user.dart';
@@ -46,9 +46,9 @@ class LocalDataService {
     ];
   }
 
-  Future<List<Summary>> getSummaries() async {
+  Future<List<Summarry>> getSummaries() async {
     final json = await _loadStringAsset(Assets.summaries);
-    return json.map<Summary>((json) => Summary.fromJson(json)).toList();
+    return json.map<Summarry>((json) => Summarry.fromJson(json)).toList();
   }
 
   Future<List<Subject>> getSubjects() async {
